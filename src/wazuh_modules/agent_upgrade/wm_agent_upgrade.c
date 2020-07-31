@@ -34,6 +34,13 @@ const wm_context WM_AGENT_UPGRADE_CONTEXT = {
     (cJSON * (*)(const void *))wm_agent_upgrade_dump
 };
 
+const char* upgrade_commands[] = {
+    [WM_UPGRADE_UPGRADE] = "upgrade",
+    [WM_UPGRADE_UPGRADE_CUSTOM] = "upgrade_custom",
+    [WM_UPGRADE_UPGRADE_RESULT] = "upgrade_result",
+    [WM_UPGRADE_AGENT_UPGRADED] = "agent_upgraded"
+};
+
 void * wm_agent_upgrade_main(wm_agent_upgrade* upgrade_config) {
 
     // Check if module is enabled
